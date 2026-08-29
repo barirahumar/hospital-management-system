@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - MediCare Hospital</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🏥
+                </div>
+
+                <div>
+                    <h4>MediCare</h4>
+                    <span>Hospital</span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="../index.html" class="menu-item">
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+                <a href="patients.html" class="menu-item">
+                    <span>🧑‍⚕️</span>
+                    Patients
+                </a>
+
+                <a href="doctors.html" class="menu-item">
+                    <span>👨‍⚕️</span>
+                    Doctors
+                </a>
+
+                <a href="nurses.html" class="menu-item">
+                    <span>👩‍⚕️</span>
+                    Nurses
+                </a>
+
+                <a href="wards.html" class="menu-item">
+                    <span>🛏️</span>
+                    Wards
+                </a>
+
+                <a href="appointments.html" class="menu-item">
+                    <span>📅</span>
+                    Appointments
+                </a>
+
+                <a href="reports.html" class="menu-item">
+                    <span>📈</span>
+                    Reports
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="settings.html" class="menu-item active">
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+                <a href="../index.html" class="menu-item">
+                    <span>🚪</span>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your hospital system preferences
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <div class="settings-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>👤 Profile Settings</h3>
+
+                        <p>
+                            Update administrator information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-4">
+
+                    <form id="profileForm">
+
+                        <div class="row">
+
+                            <!-- ADMIN NAME -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label
+                                    for="adminName"
+                                    class="form-label">
+
+                                    Admin Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="adminName"
+                                    class="form-control"
+                                    placeholder="Enter admin name">
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label
+                                    for="adminEmail"
+                                    class="form-label">
+
+                                    Email
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="adminEmail"
+                                    class="form-control"
+                                    placeholder="admin@medicare.com">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HOSPITAL NAME -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="hospitalName"
+                                class="form-label">
+
+                                Hospital Name
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="hospitalName"
+                                class="form-control"
+                                placeholder="MediCare Hospital">
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            💾 Save Profile
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= APPEARANCE ================= -->
+
+            <div class="settings-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>🎨 Appearance</h3>
+
+                        <p>
+                            Customize dashboard appearance
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-4">
+
+                    <div class="mb-3">
+
+                        <label
+                            for="themeSelect"
+                            class="form-label">
+
+                            Theme
+
+                        </label>
+
+                        <select
+                            id="themeSelect"
+                            class="form-select">
+
+                            <option value="default">
+                                Default
+                            </option>
+
+                            <option value="dark">
+                                Dark
+                            </option>
+
+                            <option value="light">
+                                Light
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="saveThemeBtn"
+                        class="btn btn-primary">
+
+                        💾 Save Appearance
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NOTIFICATIONS ================= -->
+
+            <div class="settings-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>🔔 Notifications</h3>
+
+                        <p>
+                            Manage system notifications
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-4">
+
+                    <!-- APPOINTMENTS -->
+
+                    <div class="notification-option">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="appointmentNotifications">
+
+                            <label
+                                class="form-check-label"
+                                for="appointmentNotifications">
+
+                                <strong>
+                                    Appointment Notifications
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Receive notifications about appointments
+                                </small>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PATIENTS -->
+
+                    <div class="notification-option">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="patientNotifications">
+
+                            <label
+                                class="form-check-label"
+                                for="patientNotifications">
+
+                                <strong>
+                                    Patient Notifications
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Receive notifications about new patients
+                                </small>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SYSTEM -->
+
+                    <div class="notification-option">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="systemNotifications">
+
+                            <label
+                                class="form-check-label"
+                                for="systemNotifications">
+
+                                <strong>
+                                    System Notifications
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Receive important system notifications
+                                </small>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="saveNotificationsBtn"
+                        class="btn btn-primary">
+
+                        💾 Save Notifications
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SYSTEM SETTINGS ================= -->
+
+            <div class="settings-card">
+
+                <div class="table-header">
+
+                    <div>
+
+                        <h3>🛠️ System Settings</h3>
+
+                        <p>
+                            Manage hospital system data
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-4">
+
+                    <p>
+                        Reset your saved profile, appearance
+                        and notification preferences.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        id="resetSettingsBtn"
+                        class="btn btn-danger">
+
+                        🔄 Reset Settings
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- ================= MAIN JS ================= -->
+
+    <script src="../js/main.js"></script>
+
+
+    <!-- ================= SETTINGS JS ================= -->
+
+    <script src="../js/settings.js"></script>
+
+</body>
+
+</html>
